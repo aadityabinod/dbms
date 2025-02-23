@@ -482,54 +482,38 @@ app.get("/totalTicketPerMovie", (req, res) => {
 });
 
 app.post("/adminMovieAdd", (req, res) => {
-  //admin revalidation
-  const email = req.body.email;
-  const password = req.body.password;
-  const sql0 = `SELECT * from person WHERE email = ? and password = ? and person_type = ?`;
+  const { email, password, name, image_path, language, synopsis, rating, duration, top_cast, release_date } = req.body;
+  console.log("Request Body:", req.body); // Log incoming request
 
-  const name = req.body.name;
-  const image_path = req.body.image_path;
-  const language = req.body.language;
-  const synopsis = req.body.synopsis;
-  const rating = req.body.rating;
-  const duration = req.body.duration;
-  const top_cast = req.body.top_cast;
-  const release_date = req.body.release_date;
-
-  const sql1 = `Insert into movie (name,image_path,language,synopsis,rating,duration,top_cast,release_date)
-  values
-  (?,?,?,?,?,?,?,?)`;
-  const sql2 = "SELECT LAST_INSERT_ID() as last_id";
+  const sql0 = `SELECT * FROM person WHERE email = ? AND password = ? AND person_type = ?`;
+  const sql1 = `INSERT INTO movie (name, image_path, language, synopsis, rating, duration, top_cast, release_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
+  const sql2 = "SELECT LAST_INSERT_ID() AS last_id";
 
   db.query(sql0, [email, password, "Admin"], (err, data) => {
-    if (err) return res.json(err);
-
+    if (err) {
+      console.error("Admin Check Error:", err);
+      return res.status(500).json({ error: "Database error during admin check: " + err.message });
+    }
     if (data.length === 0) {
-      return res.status(404).json({ message: "Sorry, You are not Admin!" });
+      return res.status(403).json({ message: "Unauthorized: Admin access required" });
     }
 
-    db.query(
-      sql1,
-      [
-        name,
-        image_path,
-        language,
-        synopsis,
-        rating,
-        duration,
-        top_cast,
-        release_date,
-      ],
-      (err1, data1) => {
-        if (err1) return res.json(err1);
-
-        db.query(sql2, (err2, data2) => {
-          if (err2) return res.json(err2);
-
-          return res.json(data2);
-        });
+    db.query(sql1, [name, image_path, language, synopsis, rating, duration, top_cast, release_date], (err1, result1) => {
+      if (err1) {
+        console.error("Insert Movie Error:", err1);
+        return res.status(500).json({ error: "Failed to insert movie: " + err1.message });
       }
-    );
+      db.query(sql2, (err2, data2) => {
+        if (err2) {
+          console.error("Get Last ID Error:", err2);
+          return res.status(500).json({ error: "Failed to retrieve movie ID: " + err2.message });
+        }
+        const lastId = data2[0].last_id;
+        const movieData = { id: lastId, name, image_path, language, synopsis, rating, duration, top_cast, release_date };
+        console.log("Response Data:", movieData); // Log outgoing response
+        return res.status(201).json(movieData);
+      });
+    });
   });
 });
 
