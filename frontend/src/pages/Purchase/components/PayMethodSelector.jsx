@@ -32,7 +32,7 @@ export const PayMethodSelector = ({ paymentOngoing }) => {
             />
 
             <label className="form-pay-detail" htmlFor={1}>
-              Bkash
+              Esewa
             </label>
           </div>
 
@@ -52,7 +52,7 @@ export const PayMethodSelector = ({ paymentOngoing }) => {
             />
 
             <label className="form-pay-detail" htmlFor={2}>
-              Nagad
+              Cash
             </label>
           </div>
 

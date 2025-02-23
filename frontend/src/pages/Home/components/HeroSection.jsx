@@ -44,50 +44,13 @@ export const HeroSection = () => {
             </HashLink>
           </div>
 
-          <div className="hero-review-section">
-            <div className="customers-img">
-              <img
-                src="/Images/customers/customer-1.jpg"
-                className="customer-img"
-                alt="Customer Photo"
-              />
-              <img
-                src="/Images/customers/customer-2.jpg"
-                className="customer-img"
-                alt="Customer Photo"
-              />
-              <img
-                src="/Images/customers/customer-3.jpg"
-                className="customer-img"
-                alt="Customer Photo"
-              />
-              <img
-                src="/Images/customers/customer-4.jpg"
-                className="customer-img"
-                alt="Customer Photo"
-              />
-              <img
-                src="/Images/customers/customer-5.jpg"
-                className="customer-img"
-                alt="Customer Photo"
-              />
-              <img
-                src="/Images/customers/customer-6.jpg"
-                className="customer-img"
-                alt="Customer Photo"
-              />
-            </div>
-
-            <p className="hero-review-text">
-              <span>100,000+</span> tickets sold last year
-            </p>
-          </div>
+          
         </div>
 
         <div className="hero-img-box">
           <img
             className="hero-img"
-            src="/Images/hero-img.webp"
+            src="https://i.pinimg.com/736x/30/d0/c0/30d0c02e89764fc92b2b4c21eb80c199.jpg"
             alt="Hero Image"
           />
         </div>

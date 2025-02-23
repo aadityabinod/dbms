@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import HashLoader from "react-spinners/HashLoader";
@@ -7,30 +6,16 @@ import { useDispatch } from "react-redux";
 import { showLoginModal, showSignModal } from "../reducers/authSlice";
 
 export const Footer = () => {
-  const [locationData, setLocationData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [locationData, setLocationData] = useState([
+    { location_details: "Naya Baneshwor, Kathmandu, Nepal" },
+    { location_details: "Aadarshnagar, Birgunj" }
+  ]);
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   let pageName;
   const location = useLocation();
 
   location.pathname === "/" ? (pageName = "home") : (pageName = "");
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/locationDetails`
-        );
-        setLocationData(response.data);
-      } catch (err) {
-        console.log(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   const locations = locationData.map((location, idx) => {
     return (
@@ -44,53 +29,13 @@ export const Footer = () => {
     <section className="section-footer container">
       {pageName === "home" ? (
         <HashLink className="footer-logo-container" to="#headerTop">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="footer-logo-icon"
-            viewBox="0 0 512 512"
-          >
-            <path
-              d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
-              fill="none"
-              stroke="currentColor"
-              strokeMiterlimit="10"
-              strokeWidth="32"
-            />
-            <path
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="32"
-              d="M360 94.59V296M443.13 212.87L296 360M417.41 360H216M299.13 443.13l-144-144M152 416V216M68.87 299.13l144-144M94.59 152H288M212.87 68.87L360 216"
-            />
-          </svg>
-          <h1 className="footer-logo-text">Asho Dekhi</h1>
+          
+          <h1 className="footer-logo-text">FlimFusion</h1>
         </HashLink>
       ) : (
         <Link className="footer-logo-container" to="/">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="footer-logo-icon"
-            viewBox="0 0 512 512"
-          >
-            <path
-              d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
-              fill="none"
-              stroke="currentColor"
-              strokeMiterlimit="10"
-              strokeWidth="32"
-            />
-            <path
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="32"
-              d="M360 94.59V296M443.13 212.87L296 360M417.41 360H216M299.13 443.13l-144-144M152 416V216M68.87 299.13l144-144M94.59 152H288M212.87 68.87L360 216"
-            />
-          </svg>
-          <h1 className="footer-logo-text">Asho Dekhi</h1>
+          
+          <h1 className="footer-logo-text">FlimFusion</h1>
         </Link>
       )}
 
@@ -125,7 +70,7 @@ export const Footer = () => {
       <h3 className="footer-heading">Our Theatres</h3>
 
       <p className="copyright">
-        Copyright &copy; 2023 by NELOY SAHA, Inc. This work is licensed under
+        Copyright &copy; 2023 by Aaditya Binod Yadav, Aastha Pandey, Ujashna Dangol, Inc. This work is licensed under
         the terms of the{" "}
         <a href="https://www.gnu.org/licenses/gpl-3.0.html">
           GNU General Public License, version 3 or later (GPL-3.0-or-later)

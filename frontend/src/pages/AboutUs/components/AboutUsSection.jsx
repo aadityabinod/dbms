@@ -5,66 +5,42 @@ export const AboutUsSection = () => {
         <div className="about-us-heading">
           Unveiling Our Story Behind
           <div className="aboutus-logo-container">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="aboutus-logo-icon"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z"
-                fill="none"
-                stroke="currentColor"
-                strokeMiterlimit="10"
-                strokeWidth="32"
-              />
-              <path
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="32"
-                d="M360 94.59V296M443.13 212.87L296 360M417.41 360H216M299.13 443.13l-144-144M152 416V216M68.87 299.13l144-144M94.59 152H288M212.87 68.87L360 216"
-              />
-            </svg>
-            <h1 className="aboutus-logo-text">Asho Dekhi</h1>
+            
+            <h1 className="aboutus-logo-text">Flim Fusion</h1>
           </div>
         </div>
         <div className="about-us-body">
-          <p>Welcome to ASHO DEKHI,</p>
-          <p>
-            At ASHO DEKHI, we are passionate about delivering the ultimate
-            cinematic experience to our valued moviegoers. Our mission is to
-            transport you to a world of magic, wonder, and excitement every time
-            you step into one of our theatres.
-          </p>
-          <p>
-            With state-of-the-art technology, including mesmerizing IMAX screens
-            and immersive Dolby Atmos sound, we bring your favorite movies to
-            life like never before. Our theatre&apos;s premium lounge area
-            offers a luxurious escape, where you can indulge in handcrafted
-            cocktails and gourmet snacks, surrounded by the finest comfort and
-            elegance.
-          </p>
-          <p>
-            As true cinephiles, we understand that every movie moment counts,
-            which is why we strive to provide you with the best amenities,
-            premium seating, and top-notch customer service. Whether you&apos;re
-            here for the latest blockbusters, captivating documentaries, or
-            special events, our diverse selection of films ensures there&apos;s
-            something for every taste.
-          </p>
-          <p>
-            We believe that going to the movies should be more than just an
-            outing; it should be an unforgettable experience. That&apos;s why we
-            take pride in curating each detail to create lasting memories for
-            you and your loved ones.
-          </p>
-          <p>
-            Join us at ASHO DEKHI and immerse yourself in the captivating world
-            of cinema. Get ready to unleash the movie magic and embark on a
-            journey of pure entertainment, delight, and wonder. We can&apos;t
-            wait to share the magic of the silver screen with you.
-          </p>
+        <p>Welcome to Flim Fusion!</p>
+<p>
+  At <strong>Flim Fusion</strong>, we bring you the joy of cinema with a unique
+  touch of Nepalese hospitality. Our goal is to offer an immersive movie
+  experience that transports you into a world of storytelling, emotions, and
+  excitement.
+</p>
+<p>
+  With cutting-edge technology, including crystal-clear IMAX screens and
+  immersive Dolby Atmos sound, we ensure that every movie feels larger than
+  life. Whether it’s a thrilling Bollywood blockbuster, a heartwarming Nepali
+  film, or an international masterpiece, we curate the best for you.
+</p>
+<p>
+  Our premium lounge area reflects Nepal’s warmth and hospitality, offering a
+  cozy space to relax with handcrafted beverages and delicious snacks. From
+  classic popcorn to locally inspired flavors, we bring a blend of taste and
+  comfort.
+</p>
+<p>
+  At Flim Fusion, we believe that watching a movie is more than just
+  entertainment—it’s about shared moments with friends and family. That’s why we
+  offer the best seating, world-class amenities, and excellent customer service
+  to make your visit memorable.
+</p>
+<p>
+  So, come join us at Flim Fusion, where every screening is an experience, every
+  film a journey, and every moment a celebration of cinema. Let’s enjoy the
+  magic of movies together!
+</p>
+
         </div>
       </div>
     </section>
