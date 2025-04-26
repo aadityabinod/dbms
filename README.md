@@ -5,7 +5,7 @@
 
 ---
 ##Overview
-![Alt text]((https://github.com/aadityabinod/dbms/blob/main/home))
+![Alt text](https://github.com/aadityabinod/dbms/blob/main/home)
 
 ![Alt text](https://github.com/aadityabinod/taskmanager/blob/main/2.png)
 
