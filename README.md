@@ -7,11 +7,22 @@
 ##Overview
 ![Alt text](https://github.com/aadityabinod/dbms/blob/main/home)
 
-![Alt text](https://github.com/aadityabinod/taskmanager/blob/main/2.png)
+![Alt text](https://github.com/aadityabinod/dbms/blob/main/showing_now)
 
-![Alt text](https://github.com/aadityabinod/taskmanager/blob/main/3.png)
+![Alt text](https://github.com/aadityabinod/dbms/blob/main/showtime)
 
-![Alt text](https://github.com/aadityabinod/taskmanager/blob/main/5.png)
+![Alt text](https://github.com/aadityabinod/dbms/blob/main/details)
+
+![Alt text](https://github.com/aadityabinod/dbms/blob/main/ticket)
+
+![Alt text](https://github.com/aadityabinod/dbms/blob/main/screen)
+
+![Alt text](https://github.com/aadityabinod/dbms/blob/main/ticket_info)
+
+![Alt text](https://github.com/aadityabinod/dbms/blob/main/admin)
+
+![Alt text](https://github.com/aadityabinod/dbms/blob/main/adding)
+
 
 ---
 
