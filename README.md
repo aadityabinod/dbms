@@ -4,6 +4,16 @@
 **FilmFusion** is a web-based movie reservation system designed to streamline the process of browsing movies, checking showtimes, and booking tickets. Built with a robust backend using Node.js, Express.js, and MySQL, and a dynamic frontend using React.js, it offers a seamless experience for users and administrators alike. Whether you're a moviegoer looking to reserve seats or a theater admin managing schedules, FilmFusion provides an efficient and reliable solution.
 
 ---
+##Overview
+![Alt text]((https://github.com/aadityabinod/dbms/blob/main/home))
+
+![Alt text](https://github.com/aadityabinod/taskmanager/blob/main/2.png)
+
+![Alt text](https://github.com/aadityabinod/taskmanager/blob/main/3.png)
+
+![Alt text](https://github.com/aadityabinod/taskmanager/blob/main/5.png)
+
+---
 
 ## Features 🛠️
 - **🎬 Browse and Filter Movies**: Explore movies by genre, language, or release date.
